@@ -17,15 +17,18 @@
 			case 'home':
 				include_once "view/pages/home.php";
 				break;
-
-				case 'perfil':
-					include_once "view/pages/perfil.html";
+			
+			case 'auto_comple':
+					include_once "view/pages/auto_comple.php";
 					break;
 
-
-			case 'sobre':
-				include_once "view/pages/sobre.php";
+			case 'software':
+				include_once "view/pages/conteudos/software.html";
 				break;
+			
+				case 'hardware':
+					include_once "view/pages/conteudos/hardware.html";
+					break;
 
 			
 			default:

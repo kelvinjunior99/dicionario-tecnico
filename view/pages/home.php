@@ -2,136 +2,199 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Framework - Rotas </title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dicionário Tecnico</title>
+   <link rel="stylesheet" href="view/asset/css/style.css">
+   <link rel="stylesheet" href="view/asset/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="view/asset/font-awesome/css/font-awesome.css">
+   <link rel="stylesheet" href="view/asset/css_ui/jquery-ui.css">
 
-  <!--Bootstrap 5--->
-  <link rel="stylesheet" href="view/asset/bootstrap/css/bootstrap.min.css">
+   <script src="view/asset/vue/vue.js"></script>
 
-  <!--Font awemesome--->
-  <link rel="stylesheet" href="view/asset/font-awesome/css/font-awesome.min.css">
-
-  <!---CSS--->
-  <link rel="stylesheet" href="view/asset/css/estilo.css">
-  <link rel="stylesheet" href="view/asset/css/sidebars.css">
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
+   <!-- GOOGLE FONTS -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend+Deca:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
+   <!-- HEADER -->
 
-  <main>
-    <div class="flex-shrink-0 p-3 bg-white menu">
-      <a href="" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-        <svg class="bi me-2" width="30" height="24">
-          <use xlink:href="#bootstrap" />
-        </svg>
-        <span class="fs-5 fw-semibold">Url amigavel - MF</span>
-      </a>
-      <ul class="list-unstyled ps-0">
-        <li class="mb-1">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-            Home
-          </button>
-          <div class="collapse show" id="home-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="#" class="link-dark rounded">Overview</a></li>
-              <li><a href="#" class="link-dark rounded">Updates</a></li>
-              <li><a href="#" class="link-dark rounded">Reports</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="mb-1">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-            Dashboard
-          </button>
-          <div class="collapse" id="dashboard-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="#" class="link-dark rounded">Overview</a></li>
-              <li><a href="#" class="link-dark rounded">Weekly</a></li>
-              <li><a href="#" class="link-dark rounded">Monthly</a></li>
-              <li><a href="#" class="link-dark rounded">Annually</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="mb-1">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-            Orders
-          </button>
-          <div class="collapse" id="orders-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="#" class="link-dark rounded">New</a></li>
-              <li><a href="#" class="link-dark rounded">Processed</a></li>
-              <li><a href="#" class="link-dark rounded">Shipped</a></li>
-              <li><a href="#" class="link-dark rounded">Returned</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="border-top my-3"></li>
-        <li class="mb-1">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-            Account
-          </button>
-          <div class="collapse" id="account-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="#" class="link-dark rounded">New...</a></li>
-              <li><a href="#" class="link-dark rounded">Profile</a></li>
-              <li><a href="#" class="link-dark rounded">Settings</a></li>
-              <li><a href="#" class="link-dark rounded">Sign out</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </main>
-
-  <section id="conteudo">
-    <div class="container">
-      <div class="card">
-        <div class="card-header">
-          @inicio
-        </div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0 text-center">
-            <p>Sistema de Rotas com PHP - Mini Framework</p>
-            <footer class="blockquote-footer"><cite title="Source Title">@html, @css, @javascript, @php, @mvc</cite></footer>
-          </blockquote>
-        </div>
-      </div>
-      <hr>
-
-      <div class="card">
-        <div class="card-body">
-        <p>Se você esta ler esta documentação é porque já fizeste download do #Sistema de Rota</p>
-      <p>Descubra o que ela tem: </p>
-        </div>
-      </div>
+   <header id="header">
+      <nav class="nav-header">
 
 
-    </div>
+
+         <div class="logo">
+            <!--<h1>Dicionário Tecnico</h1> -->
+         </div>
 
 
-  </section>
+         <form method="post">
+            <div class="search">
+
+               <input type="text" name="pesquisar" required id="saida" placeholder="Pesquisar ">
+
+               <button type="submit">
+                  <img src="view/asset/fontes/Vector.svg" alt="vector">
+               </button>
 
 
-  <script src="view/asset/css/sidebars.js"></script>
-  <script src="view/asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+            </div>
+         </form>
+
+         <div class="row" style="margin-top: 18px;">
+            <div class="col-md-6">
+               <div class="col-md-5">
+                  <div class="dropdown">
+                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Escolher conteudo
+                     </button>
+                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" id="software" href="#">Software</a></li>
+                        <li><a class="dropdown-item" id="hardware" href="#">Hardware</a></li>
+                        <li><a class="dropdown-item" id="mg" href="#">MG</a></li>
+                     </ul>
+                  </div>
+               </div>
+
+            </div>
+            <div class="col-md-6 text-end">
+               <a data-bs-toggle="offcanvas" class="info" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" href="">
+                  <span class="badge bg-info text-dark">Info</span>
+               </a>
+
+
+               <div class="offcanvas offcanvas-top" style="height: 100%; background-color: #c1cbda;" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                  <div class="offcanvas-header">
+                     <h5 id="offcanvasTopLabel" class="">DicTec</h5>
+                     <button type="button" class="btn-close text-reset text-danger" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body text-center">
+                     <h3 class="">Sobre Dicionário Técnico</h3>
+
+                     <h5>O site tem objetivo de ajudar os estudante de informática, facilitando em busca de
+                        significado e definições de palavras voltada a TI.</h5>
+
+                     <img src="view/asset/imagens/all.png" class="img-fluid" width="400" alt="Informática para todos">
+
+                     <div class="container" style="height: auto;">
+                        <div class="row redes">
+                           <div class="col-4 f" style="background-color: #0d6efd;">
+                              <a href="https://free.facebook.com/joaokjunioriii"><i class="fa fa-facebook" aria-hidden="true"> </i></a>
+                           </div>
+                           <div class="col-4" style="background-color: #222225;">
+                              <a href="https://github.com/kelvinjunior99"><i class="fa fa-github" aria-hidden="true"></i></a>
+                           </div>
+                           <div class="col-4 l" style="background-color: #0d6efd;">
+                              <a href="https://www.linkedin.com/in/kelvin-junior-9bb7501b9/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                           </div>
+
+                        </div>
+                     </div>
+                     <br>
+                     <h6>+244 949773020</h6>
+                     <h5>Desenvolvedor: Kelvin Junior</h5>
+                     <h6>DicTec 2020 - <?php echo date('Y');  ?> </h6>
+
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </nav>
+   </header>
+   <!-- CARDs -->
+   <main id="main">
+      <section class="container">
+         <div class="card cards " id="card">
+            <div class="title-text">
+
+               <?php
+               require_once "controller/conexao.php";
+
+               $pesquisar = isset($_POST["pesquisar"]) ? $_POST["pesquisar"] : "";
+
+               $busca = $pdo->prepare("SELECT * FROM palavras WHERE nome LIKE '$pesquisar%'");
+               $busca->execute();
+
+               if ($pesquisar != "" || $pesquisar != "") {
+
+                  $linha = $busca->fetchAll(PDO::FETCH_ASSOC);
+
+
+                  if ($linha) {
+                     foreach ($linha as $listar) {
+                        echo "<h4>" . ($listar["nome"]) . "</h4>";
+               ?>
+                        <hr>
+               <?php
+
+                        echo "<p>" . $listar["descricao"];
+                        echo "</p> ";
+                        break;
+                     }
+                  } else {
+                     echo "<h5> palavra não encontrada </h5>";
+                  }
+               }
+               ?>
+
+
+
+
+
+
+            </div>
+         </div>
+
+
+
+      </section>
+   </main>
+
+   <script src="view/asset/jquery/jquery-3.6.0.js"></script>
+   <script src="view/asset/bootstrap/js/bootstrap.min.js"></script>
+   <script src="view/asset/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="view/asset/jquery_ui/jquery-ui.js"></script>
+   <script src="view/asset/bootstrap/js/script.js"></script>
+
+   <script>
+      $(function() {
+         // var dados = [
+         //    "Java",
+         //    "JavaScript",
+         //     "Php",
+         //      "Python"
+         // ];
+
+
+
+         $.getJSON("auto_comple", function(data) {
+            // console.log(data);
+            var retorno_itens = [];
+
+            $(data).each(function(key, value) {
+
+               //console.log(value.nome);
+
+               retorno_itens.push(value.nome);
+
+            });
+
+            $("#saida").autocomplete({
+               source: retorno_itens
+            });
+         });
+
+
+      });
+   </script>
+
+
+
 </body>
 
 </html>

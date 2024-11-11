@@ -1,0 +1,260 @@
+/*== GERAL ==*/
+@font-face {
+	font-family: 'FonteTexto';
+	src: url("view/asset/fontes/Courgette-Regular.ttf");
+}
+
+@font-face {
+	font-family: 'FonteDefinicao';
+	src: url("view/asset/fontes/JosefinSans-BoldItalic.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background-color: #fff;
+	border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(88.27deg, #294a70 0%, #083d5c 100%);
+	border-radius: 0px;
+}
+
+/*textos */
+.definicao {
+  text-align: justify;
+  font-size: 12pt;
+  color: #393a3b;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.all p h6 {
+  text-align: justify!important;
+}
+.all p {
+  height: auto!important;
+}
+.all a {
+  text-decoration: none!important;
+  color: #fff!important;
+  font-size: 12pt!important;
+  font-weight: bold;
+}
+
+.all h3 {
+  background: #293855;
+  height: 40px;
+  display: flex!important;
+  align-items: start!important;
+  justify-content: start!important;
+
+}
+
+/*-----------------*/
+
+:root {
+  --background: #F3F5F7;
+  --background-gradient: linear-gradient(88.27deg, #294a70 0%, #083d5c 100%);
+  --color-text: hsla(0, 0%, 100%, 1);
+}
+
+body {
+  background-color: var(--background);
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+#header {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  background: var(--background-gradient);
+  margin-bottom: 50px;
+}
+
+.nav-header {
+  width: 70%;
+  height: 60%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav-header .info {
+  color: #d6d6d6!important;
+  text-decoration: none!important;
+}
+.logo {
+  line-height: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--color-text);
+  display: flex;
+  justify-content: space-between;
+}
+.logo h1 a {
+  color:#fff;
+  text-decoration: none;
+  font-size: 13pt!important;
+  font-weight: normal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.search {
+  display: flex;
+  padding: 15px;
+  background-color: #6D96E7;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 5px;
+}
+.search button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.search input {
+  width: 100%;
+  border: 0;
+  margin-left: 5px;
+  background-color: transparent;
+  color: #d0d0d0;
+  font-size: 11pt;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+input:focus {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: #fff;
+  outline: 0;
+}
+
+/* MAIN */
+main #main {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#main .card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0px 10px 10px rgba(19, 19, 31, 0.05)!important;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px #fff solid!important;
+  margin-bottom: 20px;
+  border-radius: 10px!important;
+  border-bottom-right-radius: 4em!important;
+}
+
+#main .cards .date {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main .card .title-text h2 {
+  font-family: 'Arial'!important;
+  line-height: 20px!important;
+  font-size: 19px;
+  color: #3f6588d7;
+  margin-bottom: 20px;
+}
+
+
+#main .cards .title-text p {
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.offcanvas-body h5 {
+  color: #000;
+}
+.offcanvas-body .redes  {
+  margin: 8px;
+}
+.offcanvas-body .redes .f {
+  border-top-left-radius: 10em;
+  border-bottom-left-radius: 10em;
+}
+.offcanvas-body .redes .l {
+  border-top-right-radius: 10em;
+  border-bottom-right-radius: 10em;
+}
+.offcanvas-body  i {
+  color: #fff;
+}
+.offcanvas-body p {
+  font-family: Arial, Helvetica, sans-serif;
+  color:#294a70;
+  font-weight: bold;
+  font-size: 13pt;
+}
+
+/*==MEDIA QUERIES==
+@media (min-width: )*/
+
+@media (max-width: 500px){
+  .logo h1 {
+    display: none;
+  }
+  .all h3 {
+    height: 52px; 
+  }
+  .offcanvas-body .redes  a  {
+      line-height: 50px;
+      text-align: center;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  html {
+      font-size: 55%;
+  }
+
+  .container, .nav-header {
+      width: 90%;
+  }
+
+  .cards {
+      padding: 30px 50px;
+  }
+  
+}
+
+@media (min-width: 1366px) {
+  html {
+      font-size: 98.5%;
+  }
+
+  .container,
+  .nav-header {
+      width: 70%;
+  }
+}
